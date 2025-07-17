@@ -43,6 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://react-google-integration.vercel.app",
   "proxy": "http://localhost:3001"
 }
