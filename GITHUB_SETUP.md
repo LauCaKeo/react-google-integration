@@ -26,6 +26,7 @@ git push -u origin main
 ### 3. Repository Structure on GitHub
 
 Your repository will contain:
+
 ```
 react-google-integration/
 ├── 📁 .github/workflows/     # CI/CD pipelines (optional)
@@ -47,6 +48,7 @@ react-google-integration/
 ### 4. 🔗 Repository Links
 
 Once deployed, your repository will be available at:
+
 - **Repository**: `https://github.com/YOUR_USERNAME/react-google-integration`
 - **Clone URL**: `https://github.com/YOUR_USERNAME/react-google-integration.git`
 - **Live Demo**: Deploy to Vercel/Netlify for live URL
@@ -66,6 +68,7 @@ Use this description for your GitHub repository:
 ### 6. 🏷️ Repository Topics
 
 Add these topics to make your repository discoverable:
+
 ```
 react, google-sheets, google-drive, javascript, nodejs, express, automation, dashboard, alerts, integration, api, responsive-design, material-design, reports, analytics
 ```
@@ -85,6 +88,7 @@ Add these badges to your README.md:
 ### 8. 📊 GitHub Features to Enable
 
 Enable these GitHub features:
+
 - ✅ Issues (for bug reports and feature requests)
 - ✅ Discussions (for community Q&A)
 - ✅ Wiki (for extended documentation)
@@ -94,12 +98,14 @@ Enable these GitHub features:
 ### 9. 🔐 Repository Settings
 
 **Security Settings:**
+
 - Enable Dependabot alerts
 - Add .env.example but never commit .env
 - Set up branch protection rules for main
 - Require pull request reviews for important changes
 
 **Collaboration:**
+
 - Add contributors if working in team
 - Set up issue templates
 - Configure pull request template
@@ -107,6 +113,7 @@ Enable these GitHub features:
 ### 10. 🚀 Post-Deploy Checklist
 
 After pushing to GitHub:
+
 - [ ] Repository is public/private as intended
 - [ ] README.md displays correctly
 - [ ] All documentation files are readable

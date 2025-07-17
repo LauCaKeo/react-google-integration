@@ -4,7 +4,8 @@
 
 ### 1. 🌐 Deploy Frontend to Vercel/Netlify
 
-#### Vercel Deployment:
+#### Vercel Deployment
+
 ```bash
 # Install Vercel CLI
 npm install -g vercel
@@ -20,7 +21,8 @@ vercel
 # Settings override: N
 ```
 
-#### Netlify Deployment:
+#### Netlify Deployment
+
 ```bash
 # Build the project
 npm run build
@@ -33,7 +35,8 @@ npm run build
 
 ### 2. ☁️ Deploy Backend to Railway/Render
 
-#### Railway Deployment:
+#### Railway Deployment
+
 ```bash
 # Install Railway CLI
 npm install -g @railway/cli
@@ -44,9 +47,10 @@ railway init
 railway up
 ```
 
-#### Render Deployment:
+#### Render Deployment
+
 1. Push code to GitHub
-2. Go to https://render.com
+2. Go to <https://render.com>
 3. Create new Web Service
 4. Connect your GitHub repository
 5. Configure:
@@ -56,7 +60,8 @@ railway up
 
 ### 3. 🐳 Docker Deployment
 
-#### Dockerfile for Frontend:
+#### Dockerfile for Frontend
+
 ```dockerfile
 FROM node:18-alpine
 WORKDIR /app
@@ -68,7 +73,8 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-#### Dockerfile for Backend:
+#### Dockerfile for Backend
+
 ```dockerfile
 FROM node:18-alpine
 WORKDIR /app
@@ -79,7 +85,8 @@ EXPOSE 3001
 CMD ["node", "server.js"]
 ```
 
-#### Docker Compose:
+#### Docker Compose
+
 ```yaml
 version: '3.8'
 services:
@@ -93,7 +100,7 @@ services:
       - backend
 
   backend:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.backend
     ports:
@@ -130,7 +137,8 @@ REACT_APP_API_BASE_URL=https://your-backend-url.com/api
 
 ### 5. 🔒 Security Considerations
 
-#### For Production:
+#### For Production
+
 1. **Never commit .env files**
 2. **Use environment-specific configurations**
 3. **Enable CORS only for your domain**
@@ -138,7 +146,8 @@ REACT_APP_API_BASE_URL=https://your-backend-url.com/api
 5. **Implement rate limiting**
 6. **Add authentication for sensitive endpoints**
 
-#### Backend Security Updates:
+#### Backend Security Updates
+
 ```javascript
 // Add to server.js for production
 const helmet = require('helmet');
@@ -162,7 +171,8 @@ app.use(cors(corsOptions));
 
 ### 6. 📊 Monitoring & Analytics
 
-#### Add monitoring to server.js:
+#### Add monitoring to server.js
+
 ```javascript
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -184,7 +194,8 @@ app.use((req, res, next) => {
 
 ### 7. 🔄 CI/CD Pipeline
 
-#### GitHub Actions (.github/workflows/deploy.yml):
+#### GitHub Actions (.github/workflows/deploy.yml)
+
 ```yaml
 name: Deploy
 
@@ -238,12 +249,14 @@ railway up                       # Deploy backend
 
 ### 9. 📱 Domain Configuration
 
-#### Custom Domain Setup:
+#### Custom Domain Setup
+
 1. **Vercel**: Go to project settings → Domains
 2. **Netlify**: Go to site settings → Domain management
 3. **Railway**: Go to project → Settings → Domains
 
-#### DNS Records:
+#### DNS Records
+
 ```
 Type: CNAME
 Name: www
@@ -256,14 +269,15 @@ Value: [Vercel/Netlify IP]
 
 ### 10. 🔧 Troubleshooting
 
-#### Common Issues:
+#### Common Issues
 
 1. **CORS Error**: Update backend CORS settings
 2. **Environment Variables**: Check all vars are set correctly
 3. **Google API Errors**: Verify service account permissions
 4. **Build Failures**: Check Node.js version compatibility
 
-#### Debug Commands:
+#### Debug Commands
+
 ```bash
 # Check environment
 printenv | grep REACT_APP
