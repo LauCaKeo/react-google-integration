@@ -13,7 +13,7 @@
 
 ```bash
 # Add GitHub remote
-git remote add origin https://github.com/YOUR_USERNAME/react-google-integration.git
+git remote add origin https://github.com/LauCaKeo/react-google-integration.git
 
 # Verify remote
 git remote -v
